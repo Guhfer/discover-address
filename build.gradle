@@ -21,12 +21,22 @@ repositories {
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter'
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.mapstruct:mapstruct:1.4.2.Final'
+    implementation 'junit:junit:4.12'
+    annotationProcessor 'org.projectlombok:lombok'
+    annotationProcessor 'org.mapstruct:mapstruct-processor:1.4.2.Final'
     compileOnly 'org.projectlombok:lombok'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
-    annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    implementation group: 'io.springfox', name: 'springfox-swagger2', version: '2.9.2'
+    implementation group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.9.2'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-actuator', version: '2.5.0'
+    testImplementation group: 'com.github.tomakehurst', name: 'wiremock', version: '2.19.0'
+    implementation group: 'commons-io', name: 'commons-io', version: '2.7'
+    testImplementation group: 'io.rest-assured', name: 'rest-assured', version: '4.3.3'
 }
 
 test {
     useJUnitPlatform()
 }
+
